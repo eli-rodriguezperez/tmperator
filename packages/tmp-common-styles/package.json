@@ -1,5 +1,5 @@
 {
-  "name": "tmp-common-styles",
+  "name": "@tmperator/tmp-common-styles",
   "version": "1.0.0-rc1",
   "description": "Common styles for tmperator web components",
   "main": "tmp-common-styles.js",
@@ -11,5 +11,26 @@
   "license": "ISC",
   "dependencies": {
     "lit-element": "^2.2.1"
+  },
+  "homepage": "https://github.com/eli-rodriguezperez/tmperator#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "http://localhost:4873/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eli-rodriguezperez/tmperator.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/eli-rodriguezperez/tmperator/issues"
   }
 }
