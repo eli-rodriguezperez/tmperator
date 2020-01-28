@@ -1,6 +1,6 @@
 {
   "name": "@tmperator/tmp-common-styles",
-  "version": "1.0.0-rc1",
+  "version": "0.1.0",
   "description": "Common styles for tmperator web components",
   "main": "tmp-common-styles.js",
   "keywords": [
