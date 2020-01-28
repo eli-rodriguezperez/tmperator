@@ -1,0 +1,15 @@
+{
+  "name": "tmp-common-styles",
+  "version": "1.0.0-rc1",
+  "description": "Common styles for tmperator web components",
+  "main": "tmp-common-styles.js",
+  "keywords": [
+    "styles",
+    "common"
+  ],
+  "author": "Eli Rodriguez",
+  "license": "ISC",
+  "dependencies": {
+    "lit-element": "^2.2.1"
+  }
+}
