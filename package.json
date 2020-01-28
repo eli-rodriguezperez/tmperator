@@ -1,7 +1,55 @@
 {
-  "name": "root",
+  "name": "@tmperator/root",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "npm run storybook",
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook -s ./assets",
+    "test": "karma start --coverage",
+    "test:watch": "karma start --auto-watch=true --single-run=false",
+    "test:compatibility": "karma start --compatibility all --coverage",
+    "test:compatibility:watch": "karma start --compatibility all --auto-watch=true --single-run=false",
+    "test:update-snapshots": "karma start --update-snapshots",
+    "test:prune-snapshots": "karma start --prune-snapshots",
+    "test:bs": "karma start karma.bs.config.js --coverage --compatibility all",
+    "test:bs:compatibility": "karma start karma.bs.config.js --coverage --compatibility all",
+    "lint": "run-p lint:*",
+    "lint:eclint": "git ls-files | xargs eclint check",
+    "lint:eslint": "eslint --ext .js,.html .",
+    "lint:prettier": "prettier \"**/*.js\" --list-different || (echo '↑↑ these files are not prettier formatted ↑↑' && exit 1)",
+    "lint:markdownlint": "git ls-files '*.md' | xargs markdownlint --ignore '**/CHANGELOG.md'",
+    "format": "npm run format:eslint && npm run format:prettier",
+    "format:eslint": "eslint --ext .js,.html . --fix",
+    "format:prettier": "prettier \"**/*.{js,md}\" --write",
+    "build-storybook": "build-storybook"
+  },
   "devDependencies": {
-    "lerna": "^3.20.0"
+    "@babel/core": "^7.8.3",
+    "@open-wc/demoing-storybook": "^0.2.0",
+    "@open-wc/eslint-config": "^1.0.0",
+    "@open-wc/prettier-config": "^0.1.0",
+    "@open-wc/testing": "^2.3.4",
+    "@open-wc/testing-karma": "^3.1.33",
+    "@open-wc/testing-karma-bs": "^1.1.58",
+    "@open-wc/testing-wallaby": "^0.1.12",
+    "@storybook/web-components": "^5.3.9",
+    "@typescript-eslint/eslint-plugin": "^2.17.0",
+    "@typescript-eslint/parser": "^2.17.0",
+    "@webcomponents/webcomponentsjs": "^2.2.5",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "eslint": "^6.8.0",
+    "lerna": "^3.20.0",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "@octokit/core": "^2.2.0",
+    "lit-html": "^1.1.2",
+    "rollup": "^1.30.1",
+    "sinon": "^8.1.1"
   }
 }
