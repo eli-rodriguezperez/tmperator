@@ -1,0 +1,55 @@
+import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
+
+import '../tmp-button.js';
+
+<Meta 
+  title="TmpButton"
+  parameters={{
+    component: "tmp-button",
+    options: { selectedPanel: "storybookjs/knobs/panel" }
+  }}
+/>
+
+# TmpButton
+
+A component for...
+
+## Features:
+
+- a
+- b
+- ...
+
+## How to use
+
+### Installation
+
+```bash
+yarn add tmp-button
+```
+
+```js
+import 'tmp-button/tmp-button.js';
+```
+
+<Preview withToolbar>
+  <Story name="Simple">
+    {html`
+      <tmp-button></tmp-button>
+    `}
+  </Story>
+</Preview>
+
+## API
+
+<Props of="tmp-button" />
+
+## Variations
+
+###### Custom Title
+
+<Story name="Custom Title">
+  {html`
+    <tmp-button .title=${'Hello World'}></tmp-button>
+  `}
+</Story>
